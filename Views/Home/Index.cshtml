@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.title = "Chating";
+}
+
+<div class="container">
+ 
+    <div  class="row p-1">
+        <input type="text" readonly disabled value=" Broadcast " class="form-control text-center"/>
+    </div>
+
+    <div class="row p-1">
+        <div class="col-1">User</div>
+        <div class="col-5">
+            <input type="text" id="userInput"  class="form-control"/>
+        </div>
+    </div>
+
+    <div class="row p-1">
+        <div class="col-1">Message</div>
+        <div class=" col-5">
+            <input type="text" id="messageInput"  class="form-control"/>
+        </div>
+    </div>
+
+    <div class="row p-1">
+       
+        <div class="col-5">
+            <input type="button" id="sendbtn" value="Send Message" class="btn btn-primary" />
+        </div>
+    </div>
+
+
+    <div class="row p-3">
+        <ul id="messageList"></ul>
+    </div>
+
+</div>
+
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/chat.js"></script>
+@section Scripts{
+    <script>
+        broadCast();
+    </script>
+}

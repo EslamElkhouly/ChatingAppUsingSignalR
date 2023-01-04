@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.title = "Chat group";
+}
+@using System.Web;
+
+<div class="container">
+    <div class="input-group p-2">
+        <input type="text" placeholder="Group Name" class="form-control" id="groupNametxt" />
+        <div class="input-group-append">
+            <input type="button" value="Join Group" id="createGroupbtn" class="btn btn-success" />
+        </div>
+    </div>
+
+  
+    <div class="row p-1">
+        <div>
+        </div>
+        <div class="col-1">Sender</div>
+        <div class="col-5">
+            <input type="text" id="senderGroupInput" class="form-control" />
+        </div>
+    </div>
+
+    <div class="row p-1">
+        <div class="col-1">Message</div>
+        <div class=" col-5">
+            <input type="text" id="messageGroupInput" class="form-control" />
+        </div>
+    </div>
+
+    <div class="row p-1">
+
+        <div class="col-5">
+            <input type="button" id="sendGroupBtn" value="Send Message" class="btn btn-primary" />
+        </div>
+    </div>
+
+
+    <div class="row p-3">
+        <ul id="messageGroupList"></ul>
+    </div>
+
+</div>
+
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+
+<script src="~/js/chatgroup.js"></script>
+@section Scripts{
+    <script>
+        groupChat();
+    </script>
+}
